@@ -61,7 +61,41 @@ const promptUser = () =>
     }, 
   ]);
 
-const generateREADME = (answers) =>
+  const generateREADME = (answers) => {
+    return `# ${titleProject}
+
+    ## Project Description
+    ${projectDescription}
+
+    ## Table of Contents
+    * [Installation](#installation) 
+    * [Usage](#usage) 
+    * [License](#license)
+    * [Contributing](#contributing)
+    * [Tests](#license)
+    * [Questions](#questions)
+    
+    ## Installation
+    ${installationInstructions}
+
+    ## Usage
+    ${usageInformation}
+
+    ## License
+    ${license}
+
+    ## Contributing
+    ${contributing}
+
+    ## Tests
+    ${tests}
+
+    ## Questions
+    Any questions can be forwarded to:
+    Github:[${questionsGithub}](https://github.com/${questionsGithub})
+    or 
+    ${questionsEmail}`
+    };
 
 
 promptUser()
